@@ -7,10 +7,36 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  // for testing
+  'xhrinterceptor': 'vendor/xhr-interceptor',
+  'methods': 'vendor/methods',
+  'http': 'vendor/http-browserify',
+  'path-to-regexp': 'vendor/path-to-regexp',
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'xhrinterceptor': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'index.js'
+  },
+  'methods': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'index.js'
+  },
+  'http': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'index.js'
+  },
+  'path-to-regexp': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'index.js'
+  },
+
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -49,7 +75,8 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
+    'main': 'main.js',
+    'xhrinterceptor': 'vendor/xhr-interceptor'
   },
   packages: cliSystemConfigPackages
 });

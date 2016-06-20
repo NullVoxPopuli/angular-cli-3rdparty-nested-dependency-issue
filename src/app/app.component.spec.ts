@@ -8,9 +8,17 @@ import {
 } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
+import { Interceptor } from 'xhrinterceptor';
+
 beforeEachProviders(() => [AppComponent]);
 
 describe('App: AngularCli3rdpartyNestedDependencyIssue', () => {
+  let interceptor;
+
+  beforeEach(() => {
+    interceptor = new Interceptor;
+  });
+
   it('should create the app',
       inject([AppComponent], (app: AppComponent) => {
     expect(app).toBeTruthy();
